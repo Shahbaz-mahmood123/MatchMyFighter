@@ -1,0 +1,118 @@
+<!--
+  Generated template for the SignupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+ 
+  </ion-header>
+   
+   
+  <ion-content class="background">
+  <ion-card>
+    <ion-card-header>
+      Signup
+    </ion-card-header>
+    <ion-card-content>
+       <ion-list >
+         
+         <ion-item>  
+           <ion-label floating > Email</ion-label>
+             <ion-input  [(ngModel)]="newuser.email"></ion-input>
+         </ion-item>
+         <ion-item>  
+            <ion-label floating> Password</ion-label>
+             <ion-input [(ngModel)]="newuser.password"></ion-input>
+         </ion-item>
+         <ion-item>  
+            <ion-label floating> Display Name</ion-label>
+             <ion-input [(ngModel)]="newuser.displayName"></ion-input>
+         </ion-item>
+         <ion-item>
+          <ion-label floating>First Name</ion-label>
+          <ion-input  [(ngModel)]="newuser.firstname" name="firstname"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label floating>Last Name</ion-label>
+          <ion-input [(ngModel)]="newuser.lastname" name="firstname"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label >Fighter, Promoter or Coach?</ion-label>
+            <ion-select [(ngModel)]="newuser.usertype" multiple="false">
+              <ion-option>Fighter</ion-option>
+              <ion-option>Coach/Promoter</ion-option>
+              
+            </ion-select>
+          </ion-item>
+
+          <ion-item>
+              <ion-label floating>Phone Number</ion-label>
+              <ion-input type="number" [(ngModel)]="newuser.contact"></ion-input>
+            </ion-item>
+
+
+         <ion-item>
+            <ion-label type="text">Weight</ion-label>
+            <ion-select (change)="selectChangeHandler($event)" [(ngModel)]="newuser.weight" multiple="false">
+              <ion-option>Featherweight-65kg</ion-option>
+              <ion-option>Lightweight-70kg</ion-option>
+              <ion-option>Welterweight-77kg</ion-option>
+              <ion-option>Middleweight-85kg</ion-option>
+              <ion-option>Light Heavyweight-95kg</ion-option>
+              <ion-option>Heavyweight-95kg+</ion-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+              <ion-label>Gender</ion-label>
+              <ion-select  [(ngModel)]="newuser.gender" multiple="false">
+                <ion-option>Male</ion-option>
+                <ion-option>Female</ion-option>
+              </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>Fights</ion-label>
+                <ion-select [(ngModel)]="newuser.fights" multiple="false">
+                  <ion-option>0-5</ion-option>
+                  <ion-option>6-10</ion-option>
+                  <ion-option>11-15</ion-option>
+                  <ion-option>16-20</ion-option>
+                  <ion-option>21+</ion-option>
+                </ion-select>
+              </ion-item>
+              <ion-item>  
+                  <ion-label floating> What is your style</ion-label>
+                  <ion-input  [(ngModel)]="newuser.style"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label floating>Age</ion-label>
+                <ion-input type="number" [(ngModel)]="newuser.age" name="firstname"></ion-input>
+              </ion-item>
+
+              
+              
+              <ion-item>
+                  <ion-label>titles</ion-label>
+                  <ion-select [(ngModel)]="newuser.titles" multiple="true">
+                  <ion-option>Area</ion-option>
+                  <ion-option>British/English</ion-option>
+                  <ion-option>European</ion-option>
+                  <ion-option>World</ion-option>
+                  </ion-select>
+                </ion-item>
+                <ion-item>  
+                    <ion-label floating> Tell us a little bit about your journey as a fighter</ion-label>
+                    <ion-input  [(ngModel)]="newuser.info"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label floating>Gym affiliation</ion-label>
+                    <ion-input [(ngModel)]="newuser.gym" ></ion-input>
+                  </ion-item>
+              <button ion-button block round outline color="light" (click)="signup()">Sign Up</button>
+              <button ion-button full clear color="light" (click)="goback()">Go Back</button>
+
+       </ion-list>    
+    </ion-card-content>
+  </ion-card>
+  </ion-content>
